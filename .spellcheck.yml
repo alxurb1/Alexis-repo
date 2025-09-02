@@ -1,0 +1,9 @@
+matrix: 
+  - name: Markdown files
+    sources: 
+    - '**/*.md' 
+    aspell:
+      lang: en
+    dictionary:
+      wordlists:
+        - .wordlist.txt
