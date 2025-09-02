@@ -1,0 +1,1 @@
+Small file to test staging and commiting
