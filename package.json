@@ -1,0 +1,24 @@
+{
+  "name": "repo-clonado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxurb1/Alexis-repo.git"
+  },
+  "author": "Oscar Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alxurb1/Alexis-repo/issues"
+  },
+  "homepage": "https://github.com/alxurb1/Alexis-repo#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6"
+  }
+}
