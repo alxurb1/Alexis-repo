@@ -1,6 +1,0 @@
-git 
-GitHub
-workflow
-CI 
-CD
-repo
