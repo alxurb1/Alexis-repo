@@ -1,27 +1,29 @@
-name: CI - Markdown Lint & Spell Check
+name: CI - Markdown and Spell Check
 
-on: 
+on:
   pull_request:
-    branches:
-      - main
+    paths:
+      - '**/*.md'
 
 jobs:
-  lint:
+  markdown-checks:
     runs-on: ubuntu-latest
     steps:
-      - name: Repo Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Markdown Lint
-        uses: avto-dev/markdown-lint@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          config: .markdownlint.yml
+          node-version: '18'
 
-      - name: Spell Check
-        uses: rojopolis/spellcheck-github-actions@0.34.0
-        with:
-          config_path: .spellcheck.yml
+      - name: Install dependencies
+        run: |
+          npm install -g markdownlint-cli
+          npm install -g cspell
 
-      - name: Test Step
-        run: echo " Workflow is running fine"
+      - name: Run markdownlint
+        run: markdownlint "Structure.md"
 
+      - name: Run cspell
+        run: cspell "Structure.md"
