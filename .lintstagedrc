@@ -1,4 +1,4 @@
 {
     "**/*.{js,jsx}": ["eslint"],
-    "*.md": "markdownlint"
+    "*.md": "npx markdownlint"
 }
