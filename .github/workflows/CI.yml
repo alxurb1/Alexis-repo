@@ -23,7 +23,7 @@ jobs:
           npm install -g cspell
 
       - name: Run markdownlint
-        run: markdownlint "Structure.md"
+        run: markdownlint "**/*.md"
 
       - name: Run cspell
-        run: cspell "Structure.md"
+        run: cspell "**/*.md"
