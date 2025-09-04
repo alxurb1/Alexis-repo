@@ -41,6 +41,6 @@ or canary releases. The focus is on scalability, quality, and security.
 
 - **GITHUB ACTIONS IMPLEMENTATION:**
 
-![Github Content](assets/3.png)
+![Github Actions Content](assets/3.png)
 
-![Github Content](assets/4.png)
+![Github Actions Content](assets/4.png)
