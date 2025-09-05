@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "repo-clonado",
   "version": "1.0.0",
   "description": "",
