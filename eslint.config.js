@@ -15,10 +15,19 @@ export default defineConfig([
   },
 
   {
-    files: ["**/*.{jsx,tsx}"],
-    ...pluginReact.configs.flat.recommended,
-    extends: [configPrettier],
+  files: ["**/*.{jsx,tsx}"],
+  ...pluginReact.configs.flat.recommended,
+  extends: [configPrettier],
+  settings: {
+    react: {
+      version: "detect", 
+    },
   },
+  rules: {
+    "react/react-in-jsx-scope": "off", 
+    "react/jsx-no-target-blank": "warn" 
+  },
+},
 
   tseslint.configs.recommended,
 
