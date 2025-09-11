@@ -1,6 +1,7 @@
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import HelloWord from "./components/HelloWord";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -18,6 +19,10 @@ export default function App() {
 				<Route path='/' element={<Home />} />
 				<Route path='/profile' element={<Profile />} />
 			</Routes>
+
+			<HelloWord name='Oscar' />
+			<HelloWord name='Alexis' />
+			<HelloWord />
 		</div>
 	);
 }
