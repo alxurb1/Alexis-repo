@@ -1,28 +1,46 @@
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import HelloWord from "./components/HelloWord";
+import HelloWorldPage from "./pages/HelloWordPage";
+import CounterPage from "./pages/CounterPage";
 
 export default function App() {
 	const navigate = useNavigate();
-
 	return (
 		<div>
-			<nav style={{ marginBottom: "20px" }}>
-				<Link to='/'>Home</Link> | <Link to='/profile'>Profile</Link> |{" "}
-				<button onClick={() => navigate("/profile")}>
-					Ir a Profile con useNavigate
-				</button>
-			</nav>
+			<div className='bg-red-400 mb-10 text-2xl font-bold'>
+				<nav className='flex items-center'>
+					<Link to='/' className='m-3'>
+						Home
+					</Link>{" "}
+					<Link to='/profile' className='m-4'>
+						Profile
+					</Link>
+					<Link to='/helloWordPage' className='m-4'>
+						{" "}
+						Hello World
+					</Link>
+					<Link to='/counterPage' className='m-4'>
+						{" "}
+						Counter
+					</Link>
+					<button
+						className='ml-auto btn-class m-4'
+						onClick={() => navigate("/")}
+					>
+						Return to home
+					</button>
+				</nav>
+			</div>
 
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/profile' element={<Profile />} />
-			</Routes>
-
-			<HelloWord name='Oscar' />
-			<HelloWord name='Alexis' />
-			<HelloWord />
+			<div>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/profile' element={<Profile />} />
+					<Route path='/HelloWordPage' element={<HelloWorldPage />} />
+					<Route path='CounterPage' element={<CounterPage />} />
+				</Routes>
+			</div>
 		</div>
 	);
 }
