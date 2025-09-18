@@ -4,6 +4,7 @@ import Profile from "./pages/Profile";
 import HelloWorldPage from "./pages/HelloWordPage";
 import CounterPage from "./pages/CounterPage";
 import UserInputPage from "./pages/UserInputPage";
+import UseEffectPage from "./pages/UseEffectPage";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -29,6 +30,10 @@ export default function App() {
 						{" "}
 						User Input
 					</Link>
+					<Link to='/UseEffectPage' className='m-4'>
+						{" "}
+						Use Effect
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -45,6 +50,7 @@ export default function App() {
 					<Route path='/HelloWordPage' element={<HelloWorldPage />} />
 					<Route path='/CounterPage' element={<CounterPage />} />
 					<Route path='/UserInputPage' element={<UserInputPage />} />
+					<Route path='/UseEffectPage' element={<UseEffectPage />} />
 				</Routes>
 			</div>
 		</div>
