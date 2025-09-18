@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import HelloWorldPage from "./pages/HelloWordPage";
 import CounterPage from "./pages/CounterPage";
+import UserInputPage from "./pages/UserInputPage";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -24,6 +25,10 @@ export default function App() {
 						{" "}
 						Counter
 					</Link>
+					<Link to='/UserInputPage' className='m-4'>
+						{" "}
+						User Input
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -38,7 +43,8 @@ export default function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/profile' element={<Profile />} />
 					<Route path='/HelloWordPage' element={<HelloWorldPage />} />
-					<Route path='CounterPage' element={<CounterPage />} />
+					<Route path='/CounterPage' element={<CounterPage />} />
+					<Route path='/UserInputPage' element={<UserInputPage />} />
 				</Routes>
 			</div>
 		</div>
