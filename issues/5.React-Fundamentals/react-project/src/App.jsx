@@ -5,6 +5,7 @@ import HelloWorldPage from "./pages/HelloWordPage";
 import CounterPage from "./pages/CounterPage";
 import UserInputPage from "./pages/UserInputPage";
 import UseEffectPage from "./pages/UseEffectPage";
+import MemoOptimizingPage from "./pages/MemoOptimizingPage";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -34,6 +35,10 @@ export default function App() {
 						{" "}
 						Use Effect
 					</Link>
+					<Link to='/MemoOptimizingPage' className='m-4'>
+						{" "}
+						Use Memo
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -51,6 +56,7 @@ export default function App() {
 					<Route path='/CounterPage' element={<CounterPage />} />
 					<Route path='/UserInputPage' element={<UserInputPage />} />
 					<Route path='/UseEffectPage' element={<UseEffectPage />} />
+					<Route path='/MemoOptimizingPage' element={<MemoOptimizingPage />} />
 				</Routes>
 			</div>
 		</div>
