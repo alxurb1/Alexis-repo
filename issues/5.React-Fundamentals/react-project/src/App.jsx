@@ -6,6 +6,7 @@ import CounterPage from "./pages/CounterPage";
 import UserInputPage from "./pages/UserInputPage";
 import UseEffectPage from "./pages/UseEffectPage";
 import MemoOptimizingPage from "./pages/MemoOptimizingPage";
+import FormikPage from "./pages/FormikPage";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -39,6 +40,10 @@ export default function App() {
 						{" "}
 						Use Memo
 					</Link>
+					<Link to='/FormikPage' className='m-4'>
+						{" "}
+						Formik
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -57,6 +62,7 @@ export default function App() {
 					<Route path='/UserInputPage' element={<UserInputPage />} />
 					<Route path='/UseEffectPage' element={<UseEffectPage />} />
 					<Route path='/MemoOptimizingPage' element={<MemoOptimizingPage />} />
+					<Route path='/FormikPage' element={<FormikPage />} />
 				</Routes>
 			</div>
 		</div>
