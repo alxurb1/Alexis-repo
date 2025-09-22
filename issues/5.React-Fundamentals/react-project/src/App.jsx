@@ -7,12 +7,13 @@ import UserInputPage from "./pages/UserInputPage";
 import UseEffectPage from "./pages/UseEffectPage";
 import MemoOptimizingPage from "./pages/MemoOptimizingPage";
 import FormikPage from "./pages/FormikPage";
+import CallbackPage from "./pages/CallbackPage";
 
 export default function App() {
 	const navigate = useNavigate();
 	return (
 		<div>
-			<div className='bg-red-400 mb-10 text-2xl font-bold'>
+			<div className='bg-red-400 mb-10 text-xl font-bold'>
 				<nav className='flex items-center'>
 					<Link to='/' className='m-3'>
 						Home
@@ -44,6 +45,10 @@ export default function App() {
 						{" "}
 						Formik
 					</Link>
+					<Link to='/CallbackPage' className='m-4'>
+						{" "}
+						Callback
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -62,6 +67,7 @@ export default function App() {
 					<Route path='/UserInputPage' element={<UserInputPage />} />
 					<Route path='/UseEffectPage' element={<UseEffectPage />} />
 					<Route path='/MemoOptimizingPage' element={<MemoOptimizingPage />} />
+					<Route path='/CallbackPage' element={<CallbackPage />} />
 					<Route path='/FormikPage' element={<FormikPage />} />
 				</Routes>
 			</div>
