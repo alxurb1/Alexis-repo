@@ -8,6 +8,7 @@ import UseEffectPage from "./pages/UseEffectPage";
 import MemoOptimizingPage from "./pages/MemoOptimizingPage";
 import FormikPage from "./pages/FormikPage";
 import CallbackPage from "./pages/CallbackPage";
+import I18nImpl from "./pages/I18nextImplementation";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -49,6 +50,10 @@ export default function App() {
 						{" "}
 						Callback
 					</Link>
+					<Link to='/I18nImpl' className='m-4'>
+						{" "}
+						Traduccion
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -69,6 +74,7 @@ export default function App() {
 					<Route path='/MemoOptimizingPage' element={<MemoOptimizingPage />} />
 					<Route path='/CallbackPage' element={<CallbackPage />} />
 					<Route path='/FormikPage' element={<FormikPage />} />
+					<Route path='/I18nImpl' element={<I18nImpl />} />
 				</Routes>
 			</div>
 		</div>
