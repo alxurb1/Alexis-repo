@@ -1,6 +1,6 @@
 # ISSUE 35 Research Best Debugging Techniques for React
 
-## REFLECTIONS
+## REFLECTION
 
 ### What are the most common debugging techniques?
 
