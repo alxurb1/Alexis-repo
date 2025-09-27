@@ -9,6 +9,8 @@ import MemoOptimizingPage from "./pages/MemoOptimizingPage";
 import FormikPage from "./pages/FormikPage";
 import CallbackPage from "./pages/CallbackPage";
 import I18nImpl from "./pages/I18nextImplementation";
+import BuggyCode1 from "./pages/BuggyCode1";
+import BugFix from "./pages/BugFix";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -54,6 +56,14 @@ export default function App() {
 						{" "}
 						Traduccion
 					</Link>
+					<Link to='/BuggyCode1' className='m-4'>
+						{" "}
+						Buggy Code
+					</Link>
+					<Link to='/BugFix' className='m-4'>
+						{" "}
+						Fix Bug
+					</Link>
 					<button
 						className='ml-auto btn-class m-4'
 						onClick={() => navigate("/")}
@@ -75,6 +85,8 @@ export default function App() {
 					<Route path='/CallbackPage' element={<CallbackPage />} />
 					<Route path='/FormikPage' element={<FormikPage />} />
 					<Route path='/I18nImpl' element={<I18nImpl />} />
+					<Route path='/BuggyCode1' element={<BuggyCode1 />} />
+					<Route path='/BugFix' element={<BugFix />} />
 				</Routes>
 			</div>
 		</div>
