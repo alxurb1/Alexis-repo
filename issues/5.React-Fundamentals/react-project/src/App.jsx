@@ -11,6 +11,7 @@ import CallbackPage from "./pages/CallbackPage";
 import I18nImpl from "./pages/I18nextImplementation";
 import BuggyCode1 from "./pages/BuggyCode1";
 import BugFix from "./pages/BugFix";
+import ReduxCounterPage from "./pages/ReduxCounterPage";
 
 export default function App() {
 	const navigate = useNavigate();
@@ -43,6 +44,10 @@ export default function App() {
 					<Link to='/MemoOptimizingPage' className='m-4'>
 						{" "}
 						Use Memo
+					</Link>
+					<Link to='/ReduxCounterPage' className='m-4'>
+						{" "}
+						ReduxCounterPage
 					</Link>
 					<Link to='/FormikPage' className='m-4'>
 						{" "}
@@ -87,6 +92,7 @@ export default function App() {
 					<Route path='/I18nImpl' element={<I18nImpl />} />
 					<Route path='/BuggyCode1' element={<BuggyCode1 />} />
 					<Route path='/BugFix' element={<BugFix />} />
+					<Route path='/ReduxCounterPage' element={<ReduxCounterPage />} />
 				</Routes>
 			</div>
 		</div>
