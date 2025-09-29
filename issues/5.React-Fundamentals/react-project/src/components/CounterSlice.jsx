@@ -1,8 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
 	value: 0,
 };
+
+export const incrementAsync = createAsyncThunk(
+	"counter/incrementAsync",
+	async () => {
+		await new Promise(resolve => setTimeout(resolve, 1000));
+		return 1;
+	}
+);
 
 export const counterSlice = createSlice({
 	name: "counter",
@@ -17,6 +25,11 @@ export const counterSlice = createSlice({
 		reset: state => {
 			state.value = 0;
 		},
+	},
+	extraReducers: builder => {
+		builder.addCase(incrementAsync.fulfilled, (state, action) => {
+			state.value += action.payload;
+		});
 	},
 });
 
